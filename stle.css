@@ -1,0 +1,244 @@
+body {
+    background-color: #222;
+    color: #fff;
+    margin: 0;
+}
+
+nav {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.8rem 0;
+    background-color: black;
+    /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    overflow: hidden;
+    top: 0%;
+  }
+
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 1rem;
+    padding: 10px;
+    font-size:large;
+}
+
+nav li a {
+    text-decoration: none;
+    color: white;
+    border-radius:  50px;
+}
+#title{
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 3rem 0 3rem;
+}
+a:hover{
+    color:black;
+    background-color: aliceblue;
+    padding: 10px;
+}
+.content {
+    display: flex;
+    justify-content: space-around;
+    padding: 7.5rem;
+    align-items: center;
+    background-color: rgb(212, 212, 30);
+}
+
+.left-section {
+    flex: 1;
+    padding-left: 10%;
+    width: auto;
+    margin:12% 0;
+    color:black;
+}
+.right-section{
+    flex: 1;
+    padding-right:10% ;
+}
+.right-section img {
+    width: 100%;
+    height: auto;
+    margin: 1%;
+    border-top-left-radius: 20%;
+}
+    .email-input {
+        box-sizing: border-box;
+        border: 2px solid red;
+        border-radius: 2.5em;
+        color: red;
+        cursor: text;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1;
+        margin: 5px;
+        padding: 1.2em 2.8em;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        border-color: purple;
+        color: purple;
+        overflow: hidden;
+        z-index: 1;
+        transition: color 150ms ease-in-out, border-color 150ms ease-in-out;
+    }
+    
+    .email-input:focus {
+        color: #fff;
+        border-color: #fff;
+        background-color: purple;
+        outline: none;
+    }
+    
+    .email-input::placeholder {
+        color: inherit; /* Inherit color from input text */
+        opacity: 0.9;   /* Slightly faded placeholder */
+    }
+
+
+/* this is button properties */
+
+  .fifth {
+    box-sizing: border-box;
+    border-radius: 2.5em;
+    cursor: pointer;
+    align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    margin: 5px;
+    padding: 1.2em 2.8em;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight : 700;
+    border-color: purple;
+    color: purple;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 150ms ease-in-out;
+    
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 100%;
+      background: purple;
+      z-index: -1;
+      transition: width 150ms ease-in-out;
+    }
+    
+
+    &:hover{
+      color: #fff;
+      &:after {
+        width: 110%;
+      }
+    }
+}
+
+.our-story {
+    
+    background-color: #f7f7f7; /* light gray background */
+    padding: 5.5rem;/* add some padding to the section */
+    text-align: center; /* center the text */
+  }
+#quote{
+    background: rgb(241, 210, 210);
+}  
+  .our-story h2 {
+    color: black;
+    font-size: 5.5em; /* larger font size for the heading */
+    font-weight: bold; /* bold font weight */
+    margin: 1em 5em 1.0em 5em;
+    padding-top: 1em;
+     /* add some space between the heading and the paragraph */
+  }
+  
+  .our-story p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em; /* larger font size for the paragraph */
+    line-height: 1.5; /* add some line height to make the text more readable */
+    color: black; /* dark gray text color */
+    margin: 0.2em 5em 16em 5em;
+    padding-bottom: 4em;
+  }
+
+
+  /* Product Section Styles */
+
+.products {
+    background-color: #cceff9;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align:center;
+    color: #222;
+    padding: 0.6em;;
+  }
+  .product_text{
+    padding: 0.6em;
+  }
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2em;
+  }
+  
+  .product {
+    background-color: #fff;
+    padding: 2rem 2rem 2rem 2rem;
+    border: 1px solid #ddd;
+    border-radius: 2em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product img {
+    width: 100%;
+    height: 27em;
+    object-fit: cover;
+    border-radius: 2em 2em;
+  }
+  
+  .product h3 {
+    font-weight: bold;
+  }
+  
+  .product p {
+   
+  }
+  
+  .price {
+    font-weight: bold;
+    color: #337ab7;
+  }
+  
+ .order_button {
+    background-color: #337ab7;
+    color: #fff;
+    border: none;
+    padding: 1em 2em;
+    border-radius: 3em;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+.order_button:hover {
+    background-color: #23527c;
+  }
